@@ -85,7 +85,7 @@
   
   <style scoped>
   .hero {
-    background-image: url('path/to/hero-image.jpg');
+   
     background-size: cover;
     color: white;
   }
