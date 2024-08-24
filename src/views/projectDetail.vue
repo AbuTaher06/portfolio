@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5893d573301aadaf938c78f3385e11ebdd4554af
 <template>
     <div class="project-detail">
         
@@ -133,4 +137,8 @@ import workshopImage from '@/assets/images/workshop.png';
     border-radius: 8px;
   }
   </style>
+<<<<<<< HEAD
   
+=======
+  
+>>>>>>> 5893d573301aadaf938c78f3385e11ebdd4554af
