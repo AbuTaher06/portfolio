@@ -8,56 +8,66 @@
         </router-link>
       </section>
       <section class="skills py-20 bg-lime-300">
-        <h2 class="text-3xl text-center">My Skills</h2>
+        <h2 class="text-3xl text-center mb-8">My Skills</h2>
         
-        <div class="flex justify-center mt-6 space-x-10">
-          <div class="text-center">
-            <h3 class="font-bold">HTML</h3>
-            <div class="w-full bg-gray-200 rounded-full">
-              <div class="bg-blue-500 h-4 rounded-full" style="width: 90%;"></div>
+        <div class="flex flex-wrap justify-center gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center w-full sm:w-1/2 md:w-1/3">
+                <i class="fab fa-html5 text-4xl mb-4"></i>
+                <h3 class="font-bold text-lg">HTML</h3>
+                <div class="w-full bg-gray-200 rounded-full mt-2">
+                    <div class="bg-blue-500 h-4 rounded-full" style="width: 90%;"></div>
+                </div>
+                <span class="text-sm">90%</span>
             </div>
-            <span class="text-sm">90%</span>
-          </div>
-          <div class="text-center">
-            <h3 class="font-bold">CSS</h3>
-            <div class="w-full bg-gray-200 rounded-full">
-              <div class="bg-blue-500 h-4 rounded-full" style="width: 85%;"></div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center w-full sm:w-1/2 md:w-1/3">
+                <i class="fab fa-css3-alt text-4xl mb-4"></i>
+                <h3 class="font-bold text-lg">CSS</h3>
+                <div class="w-full bg-gray-200 rounded-full mt-2">
+                    <div class="bg-blue-500 h-4 rounded-full" style="width: 85%;"></div>
+                </div>
+                <span class="text-sm">85%</span>
             </div>
-            <span class="text-sm">85%</span>
-          </div>
-          <div class="text-center">
-            <h3 class="font-bold">JavaScript</h3>
-            <div class="w-full bg-gray-200 rounded-full">
-              <div class="bg-blue-500 h-4 rounded-full" style="width: 80%;"></div>
+    
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center w-full sm:w-1/2 md:w-1/3">
+                <i class="fab fa-js text-4xl mb-4"></i>
+                <h3 class="font-bold text-lg">JavaScript</h3>
+                <div class="w-full bg-gray-200 rounded-full mt-2">
+                    <div class="bg-blue-500 h-4 rounded-full" style="width: 80%;"></div>
+                </div>
+                <span class="text-sm">80%</span>
             </div>
-            <span class="text-sm">80%</span>
-          </div>
+    
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center w-full sm:w-1/2 md:w-1/3">
+                <i class="fab fa-php text-4xl mb-4"></i>
+                <h3 class="font-bold text-lg">PHP</h3>
+                <div class="w-full bg-gray-200 rounded-full mt-2">
+                    <div class="bg-blue-500 h-4 rounded-full" style="width: 75%;"></div>
+                </div>
+                <span class="text-sm">75%</span>
+            </div>
+    
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center w-full sm:w-1/2 md:w-1/3">
+                <i class="fab fa-laravel text-4xl mb-4"></i>
+                <h3 class="font-bold text-lg">Laravel</h3>
+                <div class="w-full bg-gray-200 rounded-full mt-2">
+                    <div class="bg-blue-500 h-4 rounded-full" style="width: 70%;"></div>
+                </div>
+                <span class="text-sm">70%</span>
+            </div>
+    
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center w-full sm:w-1/2 md:w-1/3">
+                <i class="fab fa-vuejs text-4xl mb-4"></i>
+                <h3 class="font-bold text-lg">Vue.js</h3>
+                <div class="w-full bg-gray-200 rounded-full mt-2">
+                    <div class="bg-blue-500 h-4 rounded-full" style="width: 80%;"></div>
+                </div>
+                <span class="text-sm">80%</span>
+            </div>
         </div>
-      
-        <div class="flex justify-center mt-6 space-x-10">
-          <div class="text-center">
-            <h3 class="font-bold">PHP</h3>
-            <div class="w-full bg-gray-200 rounded-full">
-              <div class="bg-blue-500 h-4 rounded-full" style="width: 75%;"></div>
-            </div>
-            <span class="text-sm">75%</span>
-          </div>
-          <div class="text-center">
-            <h3 class="font-bold">Laravel</h3>
-            <div class="w-full bg-gray-200 rounded-full">
-              <div class="bg-blue-500 h-4 rounded-full" style="width: 70%;"></div>
-            </div>
-            <span class="text-sm">70%</span>
-          </div>
-          <div class="text-center">
-            <h3 class="font-bold">Vue.js</h3>
-            <div class="w-full bg-gray-200 rounded-full">
-              <div class="bg-blue-500 h-4 rounded-full" style="width: 80%;"></div>
-            </div>
-            <span class="text-sm">80%</span>
-          </div>
-        </div>
-      </section>
+    </section>
+    
+    
       <Footer />
     </div>
     
