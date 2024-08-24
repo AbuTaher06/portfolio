@@ -3,7 +3,9 @@ import Home from '../views/Home.vue';
 import About from '../views/About.vue';
 import Projects from '../views/Projects.vue';
 import Contact from '../views/Contact.vue';
-import ProjectDetail from '../views/ProjectDetail.vue'; // Import the ProjectDetail component
+
+import ProjectDetail from '../views/ProjectDetail.vue';
+ // Import the ProjectDetail component
 
 const routes = [
   { path: '/', name: 'Home', component: Home },
