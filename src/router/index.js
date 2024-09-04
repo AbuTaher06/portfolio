@@ -10,7 +10,12 @@ const routes = [
   { path: '/about', name: 'About', component: About },
   { path: '/projects', name: 'Projects', component: Projects },
   { path: '/contact', name: 'Contact', component: Contact },
+<<<<<<< HEAD
 ];
+=======
+  ];
+
+>>>>>>> a325ac8e42e0b76146fb50fcbd84b5a140bdc394
 const router = createRouter({
   history: createWebHistory(),
   routes,
