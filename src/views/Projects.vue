@@ -43,13 +43,13 @@
       <section class="py-10 px-6 bg-pink-300">
    
         <div class="video-gallery mt-4 flex flex-wrap">
-          <div v-for="video in selectedProject.videos" :key="video" class="w-1/2 p-2">
-            <video controls class="w-full max-h-64">
-              <source :src="video" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+          <div class="video-gallery mt-4 flex flex-wrap">
+            <div v-for="video in selectedProject.videos" :key="video" class="w-1/2 p-2">
+              <div v-html="video" class="w-full"></div>
+            </div>
           </div>
         </div>
+        
         <button @click="backToList" class="mt-6 inline-block bg-blue-500 text-white px-4 py-2 rounded">
           Back to Projects
         </button>
@@ -65,7 +65,7 @@ import galleryImage from '@/assets/images/gallery.png';
 import workshopImage from '@/assets/images/workshop.png';
 import HelpDesk from '@/assets/images/helpdesk.png';
 import Faq from '@/assets/images/faq.png';
-import Video from '@/assets/videos/video.mp4';
+//import Video from '@/assets/videos/video.mp4';
 
 
 
@@ -80,7 +80,7 @@ export default {
           description: 'A platform dedicated to addressing and reporting incidents of sexual harassment, providing resources and support for victims.',
           sections: ['Overview', 'Features', 'Impact'],
           images: [homeImage, galleryImage, workshopImage, Faq, HelpDesk],
-          videos: [Video],
+          videos: ['<iframe width="560" height="315" src="https://www.youtube.com/embed/KQ6ZxbKJnKE?si=9YAmkwQwqF958Gvd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'],
         },
         {
           id: '2',
@@ -141,6 +141,9 @@ export default {
     },
     backToList() {
       this.selectedProject = null;
+    },
+    getEmbedUrl(videoId) {
+      return `https://www.youtube.com/embed/${videoId}`;
     },
   },
 };
