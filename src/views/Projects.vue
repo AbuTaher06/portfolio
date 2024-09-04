@@ -29,19 +29,22 @@
           </li>
         </ul>
       </section>
-      <section class="py-10 px-6 bg-green-300">
-        <h2 class="mt-8 text-2xl">Images</h2>
-        <div class="image-gallery mt-4">
-          <div v-for="image in selectedProject.images" :key="image" class="inline-block mr-4">
-            <img :src="image" alt="Project Image" class="w-64 h-64 object-cover rounded" />
+      <h2 class="mt-8 text-2xl text-center bg-blue-600 text-yellow">Images</h2>
+      <section class="py-10 px-6 bg-black">
+       
+        <div class="image-gallery mt-4 flex flex-wrap">
+          <div v-for="image in selectedProject.images" :key="image" class="w-1/2 p-2">
+            <img :src="image" alt="Project Image" class="w-full max-h-64 object-cover rounded" />
           </div>
         </div>
       </section>
-      <section class="py-10 px-6 bg-orange-200">
-        <h2 class="mt-8 text-2xl">Videos</h2>
-        <div class="video-gallery mt-4">
-          <div v-for="video in selectedProject.videos" :key="video" class="inline-block mr-4">
-            <video controls class="w-32 h-32">
+      
+      <h2 class="mt-8 text-2xl text-center bg-blue-600 text-yellow">Videos</h2>
+      <section class="py-10 px-6 bg-pink-300">
+   
+        <div class="video-gallery mt-4 flex flex-wrap">
+          <div v-for="video in selectedProject.videos" :key="video" class="w-1/2 p-2">
+            <video controls class="w-full max-h-64">
               <source :src="video" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
@@ -51,6 +54,7 @@
           Back to Projects
         </button>
       </section>
+      
     </section>
   </div>
 </template>
@@ -59,6 +63,11 @@
 import homeImage from '@/assets/images/home.png';
 import galleryImage from '@/assets/images/gallery.png';
 import workshopImage from '@/assets/images/workshop.png';
+import HelpDesk from '@/assets/images/helpdesk.png';
+import Faq from '@/assets/images/faq.png';
+import Video from '@/assets/videos/video.mp4';
+
+
 
 export default {
   name: 'Projects',
@@ -70,8 +79,8 @@ export default {
           title: 'Anti Sexual Harassment Cell',
           description: 'A platform dedicated to addressing and reporting incidents of sexual harassment, providing resources and support for victims.',
           sections: ['Overview', 'Features', 'Impact'],
-          images: [homeImage, galleryImage, workshopImage],
-          videos: ['https://via.placeholder.com/150'],
+          images: [homeImage, galleryImage, workshopImage, Faq, HelpDesk],
+          videos: [Video],
         },
         {
           id: '2',

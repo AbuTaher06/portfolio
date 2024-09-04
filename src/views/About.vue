@@ -13,7 +13,7 @@
     <section class="my-journey py-20 px-4 sm:px-12 bg-orange-600">
       <h2 class="text-3xl text-center">My Journey</h2>
       <ul class="mt-6 list-disc list-inside max-w-2xl mx-auto text-lg">
-        <li>Started coding in high school.</li>
+        <li>Started coding in college.</li>
         <li>Graduated with a degree in Computer Science.</li>
         <li>Worked on various freelance projects.</li>
         <li>Currently seeking new opportunities.</li>
@@ -48,6 +48,22 @@
           <h3 class="font-bold">Database Management</h3>
           <p>Experience with MySQL and MongoDB for data storage.</p>
         </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-lg mt-4">
+          <h3 class="font-bold">Laravel</h3>
+          <p>Proficient in using Laravel for backend development and building RESTful APIs.</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-lg mt-4">
+          <h3 class="font-bold">Python</h3>
+          <p>Skilled in Python for scripting, automation, and backend development.</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-lg mt-4">
+          <h3 class="font-bold">Machine Learning</h3>
+          <p>Hands-on experience with Machine Learning techniques and frameworks like TensorFlow and scikit-learn.</p>
+        </div>
+        
       </div>
     </section>
 

@@ -4,11 +4,13 @@
         <nav class="container px-6 py-5 mx-auto md:flex md:justify-between md:items-center">
           <div class="flex items-center justify-between w-full md:w-auto">
             <router-link
-              to="/"
-              class="text-xl font-bold text-gray-800 md:text-2xl hover:text-blue-400"
-            >
-              <img src="../assets/taher.png" class="w-8 h-8 rounded-full" alt="taher" />
-            </router-link>
+            to="/"
+            class="flex items-center text-xl font-bold text-gray-800 md:text-2xl hover:text-blue-400"
+          >
+            <img src="../assets/taher.png" class="w-8 h-8 rounded-full mr-2" alt="taher" />
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-pink-500">Abu Taher</span>
+          </router-link>
+          
   
             <!-- Mobile menu button -->
             <div @click="showMenu = !showMenu" class="flex md:hidden">
@@ -71,7 +73,7 @@
                 active-class="text-blue-500"
                 exact-active-class="text-blue-500"
               >
-                Contact Us
+                Contact Me
               </router-link>
             </li>
           </ul>
