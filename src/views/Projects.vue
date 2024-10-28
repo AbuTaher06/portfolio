@@ -29,24 +29,31 @@
           </li>
         </ul>
       </section>
+
       <h2 class="mt-8 text-2xl text-center bg-blue-600 text-yellow">Images</h2>
       <section class="py-10 px-6 bg-black">
-       
         <div class="image-gallery mt-4 flex flex-wrap">
           <div v-for="image in selectedProject.images" :key="image" class="w-1/2 p-2">
-            <img :src="image" alt="Project Image" class="w-full max-h-64 object-cover rounded" />
+            <img 
+              :src="image" 
+              alt="Project Image" 
+              class="w-full max-h-64 object-cover rounded cursor-pointer transition-transform transform hover:scale-105" 
+              @click="openLightbox(image)"
+            />
           </div>
         </div>
       </section>
-      
+
+      <!-- Lightbox Modal -->
+      <div v-if="lightboxImage" class="lightbox" @click="closeLightbox">
+        <img :src="lightboxImage" class="lightbox-image" />
+      </div>
+
       <h2 class="mt-8 text-2xl text-center bg-blue-600 text-yellow">Videos</h2>
       <section class="py-10 px-6 bg-pink-300">
-   
         <div class="video-gallery mt-4 flex flex-wrap">
-          <div class="video-gallery mt-4 flex flex-wrap">
-            <div v-for="video in selectedProject.videos" :key="video" class="w-1/2 p-2">
-              <div v-html="video" class="w-full"></div>
-            </div>
+          <div v-for="video in selectedProject.videos" :key="video" class="w-1/2 p-2">
+            <div v-html="video" class="w-full"></div>
           </div>
         </div>
         
@@ -54,7 +61,6 @@
           Back to Projects
         </button>
       </section>
-      
     </section>
   </div>
 </template>
@@ -65,9 +71,6 @@ import galleryImage from '@/assets/images/gallery.png';
 import workshopImage from '@/assets/images/workshop.png';
 import HelpDesk from '@/assets/images/helpdesk.png';
 import Faq from '@/assets/images/faq.png';
-//import Video from '@/assets/videos/video.mp4';
-
-
 
 export default {
   name: 'Projects',
@@ -77,62 +80,78 @@ export default {
         {
           id: '1',
           title: 'Anti Sexual Harassment Cell',
-          description: 'A platform dedicated to addressing and reporting incidents of sexual harassment, providing resources and support for victims.',
+          description: 'A platform dedicated to addressing and reporting incidents of sexual harassment.',
           sections: ['Overview', 'Features', 'Impact'],
           images: [homeImage, galleryImage, workshopImage, Faq, HelpDesk],
-          videos: ['<iframe width="560" height="315" src="https://www.youtube.com/embed/KQ6ZxbKJnKE?si=9YAmkwQwqF958Gvd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'],
+          videos: ['<iframe width="560" height="315" src="https://www.youtube.com/embed/KQ6ZxbKJnKE" frameborder="0" allowfullscreen></iframe>'],
         },
         {
           id: '2',
           title: 'Course Improvement Management System',
           description: 'A system designed to gather feedback on courses and facilitate improvements based on student and faculty input.',
           sections: ['Overview', 'Feedback Process', 'Improvements'],
+          images: [], // Add images if available
+          videos: [], // Add videos if available
         },
         {
-            id: '3',
-            title: 'Hospital Management System',
-            description: 'A comprehensive solution for managing hospital operations, including patient records, appointments, and billing.',
-            sections: ['Overview', 'Modules', 'User Roles'],
-          },
-          {
-            id: '4',
-            title: 'CircleHub',
-            description: 'A social networking platform that connects users with shared interests and facilitates community building.',
-            sections: ['Overview', 'Features', 'Community Guidelines'],
-          },
-          {
-            id: '5',
-            title: 'Laravel Blog Website',
-            description: 'A personal blogging platform where users can share their thoughts, experiences, and expertise on various topics.',
-            sections: ['Overview', 'User Management', 'Content Creation'],
-          },
-          {
-            id: '6',
-            title: 'Personal Portfolio',
-            description: 'A showcase of my work, skills, and experiences, designed to highlight my professional journey and projects.',
-            sections: ['Overview', 'Projects', 'Contact Information'],
-          },
-          {
-            id: '7',
-            title: 'JobSprout',
-            description: 'A job portal that connects employers with potential candidates, featuring job listings and application management.',
-            sections: ['Overview', 'Job Listings', 'Application Process'],
-          },
-          {
-            id: '8',
-            title: 'Friends Supershop',
-            description: 'An online shopping platform offering a wide range of products, aimed at providing a convenient shopping experience.',
-            sections: ['Overview', 'Product Categories', 'User Reviews'],
-          },
-          {
-            id: '9',
-            title: 'Laravel Vue Ecommerce',
-            description: 'An e-commerce application built using Laravel and Vue.js, focusing on a seamless shopping and checkout experience.',
-            sections: ['Overview', 'Shopping Cart', 'Payment Gateway'],
-          },
-        // Add other projects here...
+          id: '3',
+          title: 'Hospital Management System',
+          description: 'A comprehensive solution for managing hospital operations, including patient records, appointments, and billing.',
+          sections: ['Overview', 'Modules', 'User Roles'],
+          images: [], // Add images if available
+          videos: [], // Add videos if available
+        },
+        {
+          id: '4',
+          title: 'CircleHub',
+          description: 'A social networking platform that connects users with shared interests and facilitates community building.',
+          sections: ['Overview', 'Features', 'Community Guidelines'],
+          images: [], // Add images if available
+          videos: [], // Add videos if available
+        },
+        {
+          id: '5',
+          title: 'Laravel Blog Website',
+          description: 'A personal blogging platform where users can share their thoughts, experiences, and expertise on various topics.',
+          sections: ['Overview', 'User Management', 'Content Creation'],
+          images: [], // Add images if available
+          videos: [], // Add videos if available
+        },
+        {
+          id: '6',
+          title: 'Personal Portfolio',
+          description: 'A showcase of my work, skills, and experiences, designed to highlight my professional journey and projects.',
+          sections: ['Overview', 'Projects', 'Contact Information'],
+          images: [], // Add images if available
+          videos: [], // Add videos if available
+        },
+        {
+          id: '7',
+          title: 'JobSprout',
+          description: 'A job portal that connects employers with potential candidates, featuring job listings and application management.',
+          sections: ['Overview', 'Job Listings', 'Application Process'],
+          images: [], // Add images if available
+          videos: [], // Add videos if available
+        },
+        {
+          id: '8',
+          title: 'Friends Supershop',
+          description: 'An online shopping platform offering a wide range of products, aimed at providing a convenient shopping experience.',
+          sections: ['Overview', 'Product Categories', 'User Reviews'],
+          images: [], // Add images if available
+          videos: [], // Add videos if available
+        },
+        {
+          id: '9',
+          title: 'Laravel Vue Ecommerce',
+          description: 'An e-commerce application built using Laravel and Vue.js, focusing on a seamless shopping and checkout experience.',
+          sections: ['Overview', 'Shopping Cart', 'Payment Gateway'],
+          images: [], // Add images if available
+          videos: [], // Add videos if available
+        },
       ],
       selectedProject: null,
+      lightboxImage: null,
     };
   },
   methods: {
@@ -142,8 +161,11 @@ export default {
     backToList() {
       this.selectedProject = null;
     },
-    getEmbedUrl(videoId) {
-      return `https://www.youtube.com/embed/${videoId}`;
+    openLightbox(image) {
+      this.lightboxImage = image;
+    },
+    closeLightbox() {
+      this.lightboxImage = null;
     },
   },
 };
@@ -155,12 +177,39 @@ export default {
 }
 .image-gallery {
   display: flex;
-  flex-direction: row; /* Align images in a row */
-  justify-content: center; /* Center the images horizontally */
+  flex-wrap: wrap;
 }
-.project-detail {
-  background-color: #f1f1f1;
-  padding: 20px;
-  border-radius: 8px;
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
+.lightbox-image {
+  max-width: 90%;
+  max-height: 90%;
+}
+.project {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project img {
+  transition: transform 0.3s ease;
+}
+
+.project img:hover {
+  transform: scale(1.05);
+}
+
 </style>
