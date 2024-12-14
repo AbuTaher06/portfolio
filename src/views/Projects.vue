@@ -145,7 +145,7 @@ export default {
           title: 'Anti-Sexual Harassment Cell',
           description: 'A platform dedicated to addressing and reporting incidents of sexual harassment.',
           technology: 'PHP, MySQL, JavaScript, Bootstrap',
-          liveLink: 'https://example.com/anti-sexual-harassment',
+          liveLink: 'https://shpc.jkkniu.edu.bd',
           githubRepo: 'https://github.com/yourusername/anti-harassment-cell',
           overviewDescription: 'Developed a secure platform for university students, teachers, and employees to confidentially report incidents of sexual harassment.',
           overviewPoints: [
