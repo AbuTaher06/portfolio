@@ -66,11 +66,11 @@
 </template>
 
 <script>
-import homeImage from '@/assets/images/home.png';
-import galleryImage from '@/assets/images/gallery.png';
-import workshopImage from '@/assets/images/workshop.png';
-import HelpDesk from '@/assets/images/helpdesk.png';
-import Faq from '@/assets/images/faq.png';
+import homeImage from '@/assets/images/shpc/home.png';
+import galleryImage from '@/assets/images/shpc/gallery.png';
+import workshopImage from '@/assets/images/shpc/workshop.png';
+import HelpDesk from '@/assets/images/shpc/helpdesk.png';
+import Faq from '@/assets/images/shpc/faq.png';
 
 export default {
   name: 'Projects',
