@@ -318,7 +318,7 @@ export default {
     description: 'An online shopping platform offering a wide range of products, aimed at providing a convenient shopping experience.',
     technology: 'Laravel, Vue.js, MySQL',
     liveLink: 'https://example.com/friends-supershop',
-    githubRepo: 'https://github.com/yourusername/friends-supershop',
+    githubRepo: 'https://github.com/AbuTaher06/SunriseSuperShop',
     overviewDescription: 'Built an e-commerce platform for users to browse, purchase, and review a wide range of products.',
     overviewPoints: [
       'Implemented product catalog with categories and search functionality.',
